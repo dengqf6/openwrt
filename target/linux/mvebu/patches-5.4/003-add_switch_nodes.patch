@@ -1,6 +1,6 @@
 --- a/arch/arm/boot/dts/armada-xp-linksys-mamba.dts
 +++ b/arch/arm/boot/dts/armada-xp-linksys-mamba.dts
-@@ -257,6 +257,16 @@
+@@ -320,6 +320,16 @@
  			};
  		};
  	};
@@ -16,7 +16,7 @@
 +	};
  };
  
- &pciec {
+ &pinctrl {
 --- a/arch/arm/boot/dts/armada-385-linksys.dtsi
 +++ b/arch/arm/boot/dts/armada-385-linksys.dtsi
 @@ -82,6 +82,18 @@
