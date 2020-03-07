@@ -8,7 +8,7 @@ preinit_mount_syscfg() {
 	. /lib/upgrade/common.sh
 
 	case $(board_name) in
-	linksys,mamba)
+	linksys,caiman|linksys,cobra|linksys,rango|linksys,shelby|linksys,venom)
 		needs_recovery=0
 		syscfg_part=$(grep syscfg /proc/mtd |cut -c4)
 		ubiattach -m $syscfg_part || needs_recovery=1

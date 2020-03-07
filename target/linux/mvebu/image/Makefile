@@ -128,6 +128,10 @@ ifeq ($(SUBTARGET),cortexa9)
 include cortexa9.mk
 endif
 
+ifeq ($(SUBTARGET),cortexa9_neon)
+include cortexa9_neon.mk
+endif
+
 ifeq ($(SUBTARGET),cortexa53)
 include cortexa53.mk
 endif
