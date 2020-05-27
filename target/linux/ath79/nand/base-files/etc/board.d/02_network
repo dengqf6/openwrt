@@ -11,6 +11,11 @@ ath79_setup_interfaces()
 	aerohive,hiveap-121)
 		ucidef_set_interface_lan "eth0"
 		;;
+	arris,sbr-ac1750|\
+	zyxel,nbg6716)
+		ucidef_add_switch "switch0" \
+			"0@eth0" "1:lan" "2:lan" "3:lan" "4:lan" "5:wan" "6@eth1"
+		;;
 	domywifi,dw33d)
 		ucidef_add_switch "switch0" \
 			"0@eth0" "1:wan" "2:lan" "3:lan" "4:lan" "5:lan" "6@eth1"
@@ -27,10 +32,6 @@ ath79_setup_interfaces()
 	netgear,wndr4500-v3)
 		ucidef_add_switch "switch0" \
 			"0@eth0" "1:lan:4" "2:lan:3" "3:lan:2" "4:lan:1" "5:wan"
-		;;
-	zyxel,nbg6716)
-		ucidef_add_switch "switch0" \
-			"0@eth0" "1:lan" "2:lan" "3:lan" "4:lan" "5:wan" "6@eth1"
 		;;
 	*)
 		ucidef_set_interfaces_lan_wan "eth0" "eth1"
